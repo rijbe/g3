@@ -140,15 +140,26 @@ main{
 
 
 @media screen and (max-width: 576px) {
-   .heading, nav>ul{
+   .heading, nav>ul, .teams-container{
       flex-direction: column;
    }
    header{
       padding: 20px;
    }
+   .teams-content{
+      padding: 5px;
+      
+   }
+   .teams-img-container{
+      grid-template-columns: 1fr;
+      
+   }
 }
 @media screen and (min-width: 576px) and (max-width: 960px) {
    .heading{
+      flex-direction: column;
+   }
+   .teams-container{
       flex-direction: column;
    }
 }
