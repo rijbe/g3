@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Image</title>
+    <style>
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .row{
+            height: 400px;
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+        .vertical{
+            height:calc((100% - 5px)/2);
+        }
+        .row > div{
+            flex: 1;
+        }
+        .collapse{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px) 50px 50px;
+            gap: 10px;
+        }
+        .box{
+            background-color: gray;
+
+        }
+        #box-1{
+            grid-row: 1/ 5 span;
+        }
+        #box-11, #box-12{
+            grid-column: span 3;
+        }
+        .header, .nav, .main, .sidebar, .advatise, .footer{
+            border: 2px solid royalblue;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .main{
+            grid-area: main;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .advatise{
+            grid-area: advatise;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .section-grid{
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+            "nav main main aside"
+            "nav main main aside"
+            "footer footer footer footer"
+            
+            ;
+        }
+        .div img{
+            height: 400px;
+            margin-bottom: -10px -50px ;
+        }
+
+        @media screen and (max-width: 576px) {
+            .row{
+                flex-direction: column;
+                height: auto;
+            }
+            .collapse{
+                grid-template-columns: 1fr;
+            }
+            .section-grid{
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "main "
+                    "footer"
+            
+            ;
+            }
+           
+        }     
+        @media screen and (min-width: 576px) and (max-width: 992px) {
+            .row{
+                flex-direction: column;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HEading Image</h1>
+        <div class="row">
+            <img src="images/A.jpg" alt="">
+        </div>
+    </header>
+    <main>
+        <div class="row">
+           <div>
+                <img src="images/B.jpg" alt="">
+           </div>
+           <div>
+                <img src="images/C.jpg" alt="">
+           </div>
+           <div class="vertical">
+                <img src="images/D.jpg" alt="">
+                <img src="images/E.jpg" alt="">
+           </div>
+        </div>
+        <div class="row">
+            <div>
+                <img src="images/F.jpg" alt="">
+            </div>
+            <div class="collapse">
+                <img src="images/G.jpg" alt="">
+                <img src="images/G.jpg" alt="">
+                <img src="images/G.jpg" alt="">
+                <img src="images/G.jpg" alt="">
+            </div>
+            <div> 
+                <img src="images/H.jpg" alt="">
+            </div>
+        </div>
+    </main>
+    <br><br><br>
+    <section>
+        <div class="grid-container">
+            <div class="box" id="box-1">Box - 1</div>
+            <div class="box" id="box-2">Box - 2</div>
+            <div class="box" id="box-3">Box - 3</div>
+            <div class="box" id="box-4">Box - 4</div>
+            <div class="box" id="box-5">Box - 5</div>
+            <div class="box" id="box-6">Box - 6</div>
+            <div class="box" id="box-7">Box - 7</div>
+            <div class="box" id="box-8">Box - 8</div>
+            <div class="box" id="box-9">Box - 9</div>
+            <div class="box" id="box-10">Box - 10</div>
+            <div class="box" id="box-11">Box - 11</div>
+            <div class="box" id="box-12">Box - 12</div>
+        </div>
+    </section>
+    <br><br><br>
+    <section class="section-grid">
+        <header class="header">
+            <h1>The Heading</h1>
+            
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="">item-1</a></li>
+                <li><a href="">item-2</a></li>
+                <li><a href="">item-3</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <div class="div">
+                <h1>Main Articel area</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto perspiciatis doloremque incidunt eveniet fuga maiores quae dolores, iste blanditiis doloribus.</p>
+            </div>
+            <div class="div">
+                <h1>Main Article Area 2</h1>
+                <p>Temporibus, repudiandae modi doloremque veniam quia eum dignissimos facilis earum sunt aut fuga maiores quaerat illo rem? Voluptate, hic aliquam!</p>
+            </div>
+        </main>
+        <aside class="aside">
+           <div class="sidebar">
+            <h1>Sidebar</h1>
+           </div>
+           <div class="advatise">
+            <h1>Advertising</h1>
+           </div>
+        </aside>
+        
+        <footer class="footer">
+            <h1>Footer</h1>
+        </footer>
+    </section>
+    <br><br><br><br>
+    <div class="div">
+        <img src="images/A.jpg" alt="">
+    </div>
+</body>
+</html>

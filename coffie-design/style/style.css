@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.head{
+    padding: 80px 0px;
+    background-color: black;
+}
+.header{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.t-head, .p-head, .h-btn{
+    margin-bottom: 20px;
+}
+p{
+    color: wheat;
+}
+.coffie-img{
+    margin-bottom: 30px;
+}
+
+.coffe{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(155, 202, 202);
+    border-radius: 5px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+    .coffe{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .coffe{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
