@@ -195,9 +195,20 @@ main{
    color: white;
    width: 342px;
    padding: 40px;
+   text-align: center;
+   position: relative;
+   bottom: 100px;
 }
 .ten-year h2{
    font-size: 4rem;
+   margin: 0px;
+}
+.ten-year p{
+   font-size: 1.5rem;
+}
+.feature-img{
+   height: 90%;
+   margin-left: 100px;
 }
 
 
@@ -209,7 +220,7 @@ main{
 
 
 @media screen and (max-width: 576px) {
-   .heading, nav>ul, .teams-container, .facts-card-container, .sponsors-img{
+   .heading, nav>ul, .teams-container, .facts-card-container, .sponsors-img, .feature{
       flex-direction: column;
    }
    header{
@@ -219,13 +230,17 @@ main{
       padding: 20px;
       
    }
+   .feature-img img{
+      width: 90%;
+      margin-left: 0;
+   }
    .teams-img-container{
       grid-template-columns: 1fr;
       
    }
 }
 @media screen and (min-width: 576px) and (max-width: 960px) {
-   .heading{
+   .heading, .feature{
       flex-direction: column;
    }
    .teams-container, .sponsors-img{
